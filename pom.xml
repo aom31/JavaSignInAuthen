@@ -11,8 +11,8 @@
 	<groupId>com.example</groupId>
 	<artifactId>securityauthen</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>securityAuthen</name>
-	<description>Authentication and Authorization using spring boot </description>
+	<name>securityauthen</name>
+	<description>Spring Security : Basic Authentication and Authorization using spring boot</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
