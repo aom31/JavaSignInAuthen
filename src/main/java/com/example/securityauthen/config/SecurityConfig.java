@@ -15,11 +15,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication().withUser("aom31").password("Password").roles("ADMIN");
     }
 
+    //security for all api
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.csrf().disable();
+//        http.authorizeRequests().anyRequest().fullyAuthenticated().and().httpBasic();
+//    }
+
+    //security base on url
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
-        http.authorizeRequests().anyRequest().fullyAuthenticated().and().httpBasic();
+        http.authorizeRequests().antMatchers("/rest/**").fullyAuthenticated().and().httpBasic();
     }
+
 
     @Bean
     public static NoOpPasswordEncoder passwordEncoder(){
